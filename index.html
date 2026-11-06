@@ -1,187 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Max Ryazantsev — advertising, branding, content and digital projects." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111210">
+  <meta name="description" content="Максим Рязанцев — дизайн, брендинг и рекламные концепции. Избранные проекты, практический опыт и контакты.">
   <title>Max Ryazantsev — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="cursor"></div>
-
-  <header class="nav">
-    <a class="logo" href="#top">MAX RYAZANTSEV</a>
-    <nav>
-      <a href="#about">ABOUT</a>
-      <a href="#skills">SKILLS</a>
-      <a href="#work">WORK</a>
-      <a href="#contact">CONTACT</a>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <div class="site-ambient" aria-hidden="true"><div class="ambient-halo ambient-halo-one"></div><div class="ambient-halo ambient-halo-two"></div><canvas id="ambient-canvas"></canvas><div class="ambient-grid"></div></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <header class="nav"><span class="reading-progress" aria-hidden="true"></span>
+    <a class="logo" href="#top" aria-label="Max Ryazantsev — на главную">max ryazantsev<span class="logo-mark">↗</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Меню <span aria-hidden="true">＋</span></button>
+    <nav id="primary-navigation" aria-label="Основная навигация">
+      <a href="#about">Обо мне</a><a href="#skills">Навыки</a><a href="#experience">Опыт</a><a href="#work">Работы</a><a href="#contact">Связаться <span aria-hidden="true">↗</span></a>
     </nav>
-    <span class="year">2026</span>
   </header>
-
-  <main id="top">
-    <section class="hero section-pad">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">PORTFOLIO / ADVERTISING / DIGITAL</p>
-        <h1>MAX<br><span>RYAZANTSEV</span></h1>
-        <p class="hero-sub">Creative &amp; Digital<br>Advertising / Content / Branding</p>
+  <main id="main">
+    <section class="hero section-pad" id="top" aria-labelledby="hero-title">
+      <div class="hero-top"><span><i class="tiny-cross" aria-hidden="true">＋</i> ДИЗАЙН · РЕКЛАМА · КОНТЕНТ</span><span>НЕЗАВИСИМЫЙ ВЗГЛЯД / 2026</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow availability"><span class="status-dot"></span> Открыт к стажировке и новым проектам</p>
+          <h1 id="hero-title">МАКСИМ<br><span>РЯЗАНЦЕВ</span></h1>
+          <p class="hero-sub">От идеи — к визуальному языку.<br>Дизайн, брендинг и рекламные концепции.</p>
+          <div class="hero-actions"><a class="button button-light" href="#work">Смотреть работы <span aria-hidden="true">↘</span></a><a class="text-link" href="#contact">Обсудить проект <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-signature"><span class="signature-emblem" aria-hidden="true">✳</span><span>Вижу идею.<br>Придаю ей форму.</span></div>
+        </div>
+        <figure class="hero-image"><img src="assets/hero.jpeg" alt="Максим Рязанцев на фоне вечернего моря" width="1152" height="1536" fetchpriority="high"><figcaption><span>МАКСИМ РЯЗАНЦЕВ</span><span>18 ЛЕТ / МОСКВА</span></figcaption><a class="photo-corner" href="#about" aria-label="Подробнее обо мне"><span aria-hidden="true">↗</span></a><span class="photo-edition" aria-hidden="true">MR — 01<br>ЛИЧНЫЙ ВЗГЛЯД</span></figure>
       </div>
-      <div class="hero-image reveal">
-        <img src="assets/hero.jpeg" alt="Max Ryazantsev" />
-        <div class="image-label">18 / MOSCOW / 2026</div>
-      </div>
-      <a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+      <div class="hero-bottom"><span>МИПК ИМ. ФЕДОРОВА · РЕКЛАМА</span><a href="#about">ЛИСТАЙ НИЖЕ <span aria-hidden="true">↓</span></a></div>
     </section>
 
-    <section id="about" class="about section-pad">
-      <div class="section-index">01 / ABOUT ME</div>
+    <section id="about" class="about section-pad" aria-labelledby="about-title">
+      <div class="section-index"><span>01 / ОБО МНЕ</span><span>ЛИЧНОЕ → ПРОФЕССИОНАЛЬНОЕ</span></div>
       <div class="about-grid">
-        <div>
-          <h2>I'M MAX<br><em>RYAZANTSEV.</em></h2>
-        </div>
-        <div class="about-copy">
-          <p class="lead">I’m an 18-year-old advertising student focused on design, content and digital communication.</p>
-          <p>I study advertising at the MIPK named after I. Fyodorov in Moscow. I’m interested in visual concepts, branding, social media and creative projects — from the first idea to the final result.</p>
-          <p>I’m currently building my own fashion project, VeilRose, while developing my practical experience through internships and creative work.</p>
-        </div>
-      </div>
-      <div class="stats">
-        <div><strong>18</strong><span>AGE</span></div>
-        <div><strong>03</strong><span>YEAR OF STUDY</span></div>
-        <div><strong>2026</strong><span>CURRENT YEAR</span></div>
-        <div><strong>ADVERTISING</strong><span>SPECIALIZATION</span></div>
+        <div class="about-visual reveal"><img src="assets/about.jpeg" alt="Портрет Максима Рязанцева" width="1152" height="1536" loading="lazy" decoding="async"><span class="photo-note">В поиске своего визуального языка.</span></div>
+        <div class="about-copy reveal"><h2 id="about-title">ЛЮБОПЫТСТВО.<br>ПРАКТИКА.<br><span>СВОЙ ВЗГЛЯД.</span></h2><p class="lead">Я Максим. Учусь рекламе и ищу точные визуальные решения для идей, людей и брендов.</p><p>Мне 18 лет. Я на третьем курсе МИПК им. Федорова в Москве. Интересуюсь графическим дизайном, айдентикой, визуальной коммуникацией и созданием контента.</p><p>На практике разрабатывал логотип фестиваля, готовил материалы для социальных сетей и работал над концепцией рекламного ролика. Сейчас развиваю собственный fashion-проект VeilRose и ищу возможности расти в креативной индустрии.</p><div class="about-facts"><div><strong>18</strong><span>ЛЕТ</span></div><div><strong>03</strong><span>КУРС · РЕКЛАМА</span></div><div><strong>Москва</strong><span>ГОРОД</span></div></div></div>
       </div>
     </section>
 
-    <section id="skills" class="skills section-pad">
-      <div class="section-index">02 / SKILLS</div>
-      <div class="skill-list">
-        <div class="skill" data-note="Logo concepts, marks and visual identity.">LOGO DESIGN <span>↗</span></div>
-        <div class="skill" data-note="Visual systems and identity elements.">BRANDING <span>↗</span></div>
-        <div class="skill" data-note="Posts, concepts and visual communication.">CONTENT <span>↗</span></div>
-        <div class="skill" data-note="VK and social-first communication.">SOCIAL MEDIA <span>↗</span></div>
-        <div class="skill" data-note="Creative ideas and advertising communication.">ADVERTISING <span>↗</span></div>
-        <div class="skill" data-note="Short-form video editing in CapCut.">VIDEO EDITING <span>↗</span></div>
-        <div class="skill" data-note="Interface and visual design.">FIGMA <span>↗</span></div>
-        <div class="skill" data-note="Vector design and logo work.">ADOBE ILLUSTRATOR <span>↗</span></div>
-        <div class="skill" data-note="Short-form editing and social content.">CAPCUT <span>↗</span></div>
-      </div>
-      <div class="skill-note">HOVER A SKILL</div>
-    </section>
-
-    <section class="experience section-pad">
-      <div class="section-index">03 / EXPERIENCE</div>
-      <div class="experience-row">
-        <span>2026</span>
-        <div><h3>ООО «БАНТ-ПЛЭЙС»</h3><p>ECO Festival «Хранители леса»</p></div>
-        <b>BRANDING / SOCIAL MEDIA / CONTENT</b>
-      </div>
-      <div class="experience-row">
-        <span>2025</span>
-        <div><h3>ООО «ДИАСТОП»</h3><p>Advertising project</p></div>
-        <b>CREATIVE / SCRIPTWRITING / VIDEO</b>
+    <section id="skills" class="skills section-pad" aria-labelledby="skills-title">
+      <div class="section-index"><span>02 / НАВЫКИ</span><span>ИНСТРУМЕНТЫ И НАПРАВЛЕНИЯ</span></div>
+      <div class="section-heading reveal"><h2 id="skills-title">ВСЁ СВЯЗАНО<br><span>С ИДЕЕЙ.</span></h2><p>От первого наброска до визуальной коммуникации. Выбери направление, чтобы узнать больше.</p></div>
+      <div class="skills-layout">
+        <div class="skill-orbit" role="group" aria-label="Направления работы">
+          <div class="orbit-ring orbit-ring-one" aria-hidden="true"></div><div class="orbit-ring orbit-ring-two" aria-hidden="true"></div><div class="orbit-ring orbit-ring-three" aria-hidden="true"></div>
+          <div class="orbit-center" aria-hidden="true"><span>m<span class="muted">r</span>.</span><small>ИДЕЯ В ЦЕНТРЕ</small></div>
+          <div class="orbit-system">
+            <div class="orbit-node" style="--x:50%;--y:9%"><button class="skill is-selected" type="button" aria-pressed="true" data-title="Логотипы" data-note="Ищу форму, которая передаёт характер проекта. Работаю с идеей знака, композицией и векторной графикой.">Логотипы <span aria-hidden="true">↗</span></button></div>
+            <div class="orbit-node" style="--x:80%;--y:21%"><button class="skill" type="button" aria-pressed="false" data-title="Брендинг" data-note="Собираю визуальный язык: цвет, типографику и графические элементы, которые работают вместе.">Брендинг <span aria-hidden="true">↗</span></button></div>
+            <div class="orbit-node" style="--x:91%;--y:50%"><button class="skill" type="button" aria-pressed="false" data-title="Контент" data-note="Придумываю темы и визуальные концепции для публикаций. Соединяю смысл, изображение и текст.">Контент <span aria-hidden="true">↗</span></button></div>
+            <div class="orbit-node" style="--x:79%;--y:79%"><button class="skill" type="button" aria-pressed="false" data-title="Реклама" data-note="Работаю над рекламными идеями и сценариями: от задачи и аудитории до сообщения и подачи.">Реклама <span aria-hidden="true">↗</span></button></div>
+            <div class="orbit-node" style="--x:50%;--y:91%"><button class="skill" type="button" aria-pressed="false" data-title="Видео" data-note="Разрабатываю идеи видеоконтента, пишу сценарии и монтирую короткие ролики в CapCut.">Видео <span aria-hidden="true">↗</span></button></div>
+            <div class="orbit-node" style="--x:20%;--y:79%"><button class="skill" type="button" aria-pressed="false" data-title="Figma" data-note="Использую Figma для компоновки визуальных материалов, макетов и интерфейсных решений.">Figma <span aria-hidden="true">↗</span></button></div>
+            <div class="orbit-node" style="--x:9%;--y:50%"><button class="skill" type="button" aria-pressed="false" data-title="Illustrator" data-note="Работаю с векторной графикой, формой и логотипами в Adobe Illustrator.">Illustrator <span aria-hidden="true">↗</span></button></div>
+            <div class="orbit-node" style="--x:21%;--y:21%"><button class="skill" type="button" aria-pressed="false" data-title="Соцсети" data-note="Готовлю публикации и визуальные материалы для социальных сетей. Есть практический опыт работы с сообществом фестиваля во ВКонтакте.">Соцсети <span aria-hidden="true">↗</span></button></div>
+          </div>
+        </div>
+        <div class="skill-detail" aria-live="polite" aria-atomic="true"><span class="eyebrow">В ФОКУСЕ / <span id="skill-number">01</span></span><h3 id="skill-title">Логотипы</h3><p id="skill-note">Ищу форму, которая передаёт характер проекта. Работаю с идеей знака, композицией и векторной графикой.</p><a class="text-link" href="#work">Посмотреть в проектах <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
-    <section id="work" class="work section-pad">
-      <div class="section-index">04 / SELECTED WORK</div>
+    <section id="experience" class="experience section-pad" aria-labelledby="experience-title">
+      <div class="section-index"><span>03 / ОПЫТ</span><span>УЧУСЬ В РЕАЛЬНЫХ ПРОЕКТАХ</span></div>
+      <h2 class="compact-heading reveal" id="experience-title">ОТ ТЕОРИИ<br><span>К ПРАКТИКЕ.</span></h2>
+      <div class="experience-row reveal"><span class="experience-year">2026</span><div><span class="eyebrow">ПРОИЗВОДСТВЕННАЯ ПРАКТИКА</span><h3>ООО «Бант-Плэйс»</h3><p>Экофестиваль «Хранители леса»</p><ul><li>Разработка логотипа и визуальных материалов.</li><li>Подготовка публикаций для социальных сетей.</li><li>Участие в организации мероприятия.</li></ul></div><span class="experience-tag">БРЕНДИНГ<br>СОЦСЕТИ · КОНТЕНТ</span></div>
+      <div class="experience-row reveal"><span class="experience-year">2025</span><div><span class="eyebrow">ПРОИЗВОДСТВЕННАЯ ПРАКТИКА</span><h3>ООО «Диастоп»</h3><p>Рекламный проект для центра подологии</p><ul><li>Разработка рекламной концепции.</li><li>Написание сценария и работа над идеей видеоконтента.</li><li>Создание рекламной коммуникации.</li></ul></div><span class="experience-tag">КРЕАТИВ<br>СЦЕНАРИЙ · ВИДЕО</span></div>
+    </section>
 
-      <article class="project project-feature" id="forest">
-        <div class="project-meta"><span>01</span><span>BRANDING / SOCIAL MEDIA / EVENT</span></div>
-        <div class="project-title-row">
-          <h2>ХРАНИТЕЛИ<br><em>ЛЕСА</em></h2>
-          <a href="#forest-case">VIEW PROJECT ↗</a>
-        </div>
-        <img src="assets/forest-poster.png" alt="Хранители леса poster" class="project-image" />
-      </article>
-
-      <article class="project" id="diastop">
-        <div class="project-meta"><span>02</span><span>ADVERTISING / VIDEO / CREATIVE</span></div>
-        <div class="project-title-row">
-          <h2>ДИАСТОП</h2>
-          <a href="#diastop-case">VIEW PROJECT ↗</a>
-        </div>
-        <div class="image-pair">
-          <img src="assets/diastop-logo.png" alt="ДиаСтоп logo" />
-          <img src="assets/about.jpeg" alt="DIASTOP practice" />
+    <section id="work" class="work section-pad" aria-labelledby="work-title">
+      <div class="section-index"><span>04 / ИЗБРАННЫЕ РАБОТЫ</span><span>2025 — 2026</span></div>
+      <div class="section-heading reveal"><h2 id="work-title">ИДЕИ,<br><span>КОТОРЫЕ ВИДНО.</span></h2><p>Практика, эксперименты и собственный проект. У каждой работы — своя задача и свой характер.</p></div>
+      <article class="project" id="forest" aria-labelledby="forest-title">
+        <div class="project-info reveal"><div class="project-number">ПРОЕКТ / 01 <span>2026</span></div><h3 id="forest-title">ХРАНИТЕЛИ<br>ЛЕСА<span class="project-arrow" aria-hidden="true">↗</span></h3><p class="project-kind">ЭКОФЕСТИВАЛЬ · БРЕНДИНГ · СОЦСЕТИ</p><p class="project-description">Визуальная коммуникация фестиваля, который объединяет людей вокруг заботы о природе.</p><details id="forest-case"><summary>Задача и моя роль <span aria-hidden="true">＋</span></summary><div class="project-story"><p>Во время практики в ООО «Бант-Плэйс» я разработал логотип фестиваля, создавал визуальные материалы и готовил публикации для сообщества во ВКонтакте. Также участвовал в организации мероприятия.</p><p>В галерее — логотип, афиша, рабочие материалы, публикации и фотографии события.</p></div></details><span class="project-footnote">ЛОГОТИП → ВИЗУАЛЬНЫЕ МАТЕРИАЛЫ → СОБЫТИЕ</span></div>
+        <div class="gallery gallery-forest reveal" data-gallery aria-label="Материалы фестиваля Хранители леса" role="region" aria-roledescription="карусель">
+          <div class="gallery-track">
+            <a class="gallery-slide zoom-link is-active" href="assets/forest-poster.png" data-caption="Афиша фестиваля" aria-label="Увеличить афишу фестиваля"><span class="art-frame" data-crop="0,0,960,1280" style="--art-ratio:960/1280;--art-width:420.00px;--image-width:100.000000%;--image-height:100.000000%;--image-left:0.000000%;--image-top:0.000000%"><img src="assets/forest-poster.png" alt="Афиша экофестиваля «Хранители леса»" width="960" height="1280" loading="lazy" decoding="async"></span></a>
+            <a class="gallery-slide zoom-link" href="assets/forest-logo.png" data-caption="Логотип фестиваля" aria-label="Увеличить логотип фестиваля"><span class="art-frame" data-crop="8,342,575,596" style="--art-ratio:575/596;--art-width:540.27px;--image-width:102.608696%;--image-height:214.765101%;--image-left:-1.391304%;--image-top:-57.382550%"><img src="assets/forest-logo.png" alt="Логотип «Хранители леса»" width="590" height="1280" loading="lazy" decoding="async"></span></a>
+            <a class="gallery-slide zoom-link" href="assets/forest-process.png" data-caption="Работа над проектом" aria-label="Увеличить рабочие материалы"><span class="art-frame" data-crop="0,0,960,1280" style="--art-ratio:960/1280;--art-width:420.00px;--image-width:100.000000%;--image-height:100.000000%;--image-left:0.000000%;--image-top:0.000000%"><img src="assets/forest-process.png" alt="Рабочая доска с идеями проекта" width="960" height="1280" loading="lazy" decoding="async"></span></a>
+            <a class="gallery-slide zoom-link" href="assets/forest-event.png" data-caption="Фестиваль в Хованском лесу" aria-label="Увеличить фотографию события"><span class="art-frame" data-crop="0,0,960,1280" style="--art-ratio:960/1280;--art-width:420.00px;--image-width:100.000000%;--image-height:100.000000%;--image-left:0.000000%;--image-top:0.000000%"><img src="assets/forest-event.png" alt="Материалы фестиваля на площадке в лесу" width="960" height="1280" loading="lazy" decoding="async"></span></a>
+            <a class="gallery-slide zoom-link" href="assets/forest-detail.png" data-caption="Визуальные материалы события" aria-label="Увеличить визуальные материалы"><span class="art-frame" data-crop="0,265,590,1015" style="--art-ratio:590/1015;--art-width:325.52px;--image-width:100.000000%;--image-height:126.108374%;--image-left:0.000000%;--image-top:-26.108374%"><img src="assets/forest-detail.png" alt="Фрагмент оформления экофестиваля" width="590" height="1280" loading="lazy" decoding="async"></span></a>
+            <a class="gallery-slide zoom-link" href="assets/forest-video.png" data-caption="Титульный кадр видеопубликации" aria-label="Увеличить пример публикации"><span class="art-frame" data-crop="58,240,441,706" style="--art-ratio:441/706;--art-width:349.80px;--image-width:133.786848%;--image-height:181.303116%;--image-left:-13.151927%;--image-top:-33.994334%"><img src="assets/forest-video.png" alt="Кадр видеопубликации фестиваля во ВКонтакте" width="590" height="1280" loading="lazy" decoding="async"></span></a>
+          </div><div class="gallery-footer"><div><span class="gallery-counter" aria-live="polite">01 / 06</span><p class="gallery-caption">Афиша фестиваля</p></div><div class="gallery-buttons"><button type="button" class="gallery-prev icon-button" aria-label="Предыдущее изображение">←</button><button type="button" class="gallery-next icon-button" aria-label="Следующее изображение">→</button></div></div><span class="gallery-hint">Нажми на изображение, чтобы рассмотреть</span>
         </div>
       </article>
-
-      <article class="project" id="veilrose">
-        <div class="project-meta"><span>03</span><span>FASHION / BRANDING / CREATIVE DIRECTION</span></div>
-        <div class="project-title-row">
-          <h2>VEILROSE</h2>
-          <span class="status">ONGOING PROJECT</span>
-        </div>
-        <div class="veilrose-placeholder">
-          <span>COMING SOON</span>
-          <p>Independent fashion project — currently in development.</p>
-        </div>
+      <article class="project" id="diastop" aria-labelledby="diastop-title">
+        <div class="project-info reveal"><div class="project-number">ПРОЕКТ / 02 <span>2025</span></div><h3 id="diastop-title">ДИАСТОП<span class="project-arrow" aria-hidden="true">↗</span></h3><p class="project-kind">РЕКЛАМА · СЦЕНАРИЙ · ВИДЕОКОНЦЕПЦИЯ</p><p class="project-description">Идея 60-секундного вертикального ролика для московского центра подологии.</p><details id="diastop-case"><summary>Концепция и сценарий <span aria-hidden="true">＋</span></summary><div class="project-story"><p>На практике в ООО «Диастоп» я разработал рекламную концепцию и сценарий. Сюжет ведёт зрителя от осознания проблемы к профессиональной помощи и призыву к действию.</p><ol class="script-timeline"><li><span>00–07</span>Проблема и эмоциональное вступление</li><li><span>07–15</span>Информационный блок</li><li><span>15–25</span>Выбор зрителя</li><li><span>25–40</span>Знакомство с центром</li><li><span>40–55</span>Забота и поддержка</li><li><span>55–60</span>Финальный призыв</li></ol></div></details><span class="project-footnote">ИДЕЯ → СЦЕНАРИЙ → РЕКЛАМНОЕ СООБЩЕНИЕ</span></div>
+        <div class="gallery gallery-diastop reveal" data-gallery aria-label="Визуальные материалы Диастоп" role="region" aria-roledescription="карусель"><div class="gallery-track"><a class="gallery-slide zoom-link is-active" href="assets/diastop-logo.png" data-caption="Логотип на цветном фоне" aria-label="Увеличить материалы Диастоп"><span class="art-frame" data-crop="4,266,582,412" style="--art-ratio:582/412;--art-width:791.07px;--image-width:101.546392%;--image-height:310.679612%;--image-left:-0.687285%;--image-top:-64.563107%"><img src="assets/diastop-logo.png" alt="Презентация логотипа бренда «Диастоп»" width="591" height="1280" loading="lazy" decoding="async"></span></a><a class="gallery-slide zoom-link" href="assets/diastop-logo.png" data-caption="Логотип на белом фоне" data-tone="light" aria-label="Увеличить логотип на белом фоне"><span class="art-frame" data-crop="4,687,582,412" style="--art-ratio:582/412;--art-width:791.07px;--image-width:101.546392%;--image-height:310.679612%;--image-left:-0.687285%;--image-top:-166.747573%"><img src="assets/diastop-logo.png" alt="Презентация логотипа бренда «Диастоп»" width="591" height="1280" loading="lazy" decoding="async"></span></a></div><div class="gallery-footer"><div><span class="gallery-counter">01 / 02</span><p class="gallery-caption">Логотип на цветном фоне</p></div><div class="gallery-buttons"><button type="button" class="gallery-prev icon-button" aria-label="Предыдущее изображение" disabled>←</button><button type="button" class="gallery-next icon-button" aria-label="Следующее изображение" disabled>→</button></div></div><span class="gallery-hint">Нажми на изображение, чтобы рассмотреть</span></div>
       </article>
+      <article class="project project-veilrose reveal" id="veilrose" aria-labelledby="veilrose-title"><div><div class="project-number">ПРОЕКТ / 03 <span>В РАЗРАБОТКЕ</span></div><h3 id="veilrose-title">VeilRose</h3><p class="project-kind">МОДА · БРЕНДИНГ · КРЕАТИВНОЕ НАПРАВЛЕНИЕ</p><p class="project-description">Мой собственный fashion-проект.<br>Сейчас формирую идею и визуальный характер бренда.</p></div><div class="coming-soon"><span class="status-dot"></span>СКОРО ЗДЕСЬ<span class="coming-arrow" aria-hidden="true">↗</span></div></article>
     </section>
 
-    <section id="forest-case" class="case section-pad">
-      <div class="section-index">CASE / 01</div>
-      <div class="case-head">
-        <h2>ХРАНИТЕЛИ<br><em>ЛЕСА</em></h2>
-        <p>ECO FESTIVAL / BRANDING / SOCIAL MEDIA</p>
-      </div>
-      <div class="case-text">
-        <p class="lead">A practical project focused on the visual identity and social media communication of the «Хранители леса» eco festival.</p>
-        <p>During my internship at ООО «Бант-Плэйс», I worked on the festival’s visual communication: created the logo and prepared posts and visual materials for the VK community.</p>
-      </div>
-      <div class="case-gallery">
-        <img src="assets/forest-logo.png" alt="Хранители леса logo" />
-        <img src="assets/forest-process.png" alt="Project process" />
-        <img src="assets/forest-video.png" alt="Festival social media video" />
-        <img src="assets/forest-poster.png" alt="Festival poster" />
-        <img src="assets/forest-event.png" alt="Festival event" />
-        <img src="assets/forest-detail.png" alt="Festival visual detail" />
-      </div>
-    </section>
-
-    <section id="diastop-case" class="case section-pad">
-      <div class="section-index">CASE / 02</div>
-      <div class="case-head">
-        <h2>ДИАСТОП</h2>
-        <p>ADVERTISING / SCRIPT / VIDEO CONCEPT</p>
-      </div>
-      <div class="case-text">
-        <p class="lead">A 60-second vertical advertising concept for a Moscow podology center for people with diabetes.</p>
-        <p>During my internship at ООО «Диастоп», I developed the creative concept and script for the video. The structure moves from problem and risk to professional care and a call to action.</p>
-      </div>
-      <div class="diastop-script">
-        <div><span>00–07</span><p>ЖЁСТКАЯ ПРАВДА — opening with the problem and emotional tension.</p></div>
-        <div><span>07–15</span><p>СТАТИСТИКА — information that reinforces the importance of timely care.</p></div>
-        <div><span>15–25</span><p>ВАШ ВЫБОР — the viewer faces a decision.</p></div>
-        <div><span>25–40</span><p>ДИАСТОП — professional care and expertise.</p></div>
-        <div><span>40–55</span><p>ЧТО ВЫ ПОЛУЧАЕТЕ — reassurance and confidence.</p></div>
-        <div><span>55–60</span><p>ФИНАЛ — concise call to action.</p></div>
-      </div>
-      <div class="diastop-visuals">
-        <img src="assets/diastop-logo.png" alt="DIASTOP logo" />
-        <img src="assets/about.jpeg" alt="DIASTOP practice photo" />
-      </div>
-    </section>
-
-    <section id="contact" class="contact section-pad">
-      <div class="section-index">05 / CONTACT</div>
-      <h2>LET'S<br><em>WORK</em><br>TOGETHER.</h2>
-      <div class="contact-links">
-        <a href="mailto:max.ryazantsev@example.com">EMAIL <span>↗</span></a>
-        <a href="#" aria-label="Telegram placeholder">TELEGRAM <span>↗</span></a>
-        <a href="#" aria-label="VK placeholder">VK <span>↗</span></a>
-        <a href="#" aria-label="TikTok placeholder">TIKTOK <span>↗</span></a>
-      </div>
-      <footer>MAX RYAZANTSEV © 2026 <span>PORTFOLIO</span></footer>
-    </section>
+    <section id="contact" class="contact section-pad" aria-labelledby="contact-title"><div class="section-index"><span>05 / КОНТАКТЫ</span><span>СЛЕДУЮЩИЙ ПРОЕКТ — ВМЕСТЕ?</span></div><div class="contact-heading reveal"><h2 id="contact-title">ЕСТЬ ИДЕЯ?<br><span>ДАВАЙ ОБСУДИМ.</span></h2><span class="contact-arrow" aria-hidden="true">↗</span></div><p class="contact-intro">Открыт к стажировке, работе в команде и новым творческим задачам.</p><div class="contact-links"><a href="https://t.me/maxrzntsv" target="_blank" rel="noopener noreferrer"><span class="contact-channel">TELEGRAM</span><span class="contact-value">@maxrzntsv</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a><a href="mailto:ofaulcovome@gmail.com"><span class="contact-channel">EMAIL</span><span class="contact-value">ofaulcovome@gmail.com</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a></div><footer><span>MAX RYAZANTSEV © 2026</span><span>ДИЗАЙН · РЕКЛАМА · КОНТЕНТ</span><a href="#top">НАВЕРХ ↑</a></footer></section>
   </main>
-
-  <script src="script.js"></script>
+  <dialog class="image-viewer" id="image-viewer" aria-label="Увеличенный просмотр работы"><div class="viewer-top"><span>ДЕТАЛИ ПРОЕКТА</span><button class="viewer-close" type="button" aria-label="Закрыть просмотр">Закрыть <span aria-hidden="true">×</span></button></div><figure><svg id="viewer-image" class="viewer-art" viewBox="0 0 960 1280" role="img" aria-label="Работа из проекта" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="viewer-crop"><rect id="viewer-crop-rect" width="960" height="1280" rx="18"/></clipPath></defs><image id="viewer-source" width="960" height="1280" clip-path="url(#viewer-crop)"/></svg><figcaption id="viewer-caption"></figcaption></figure><div class="viewer-bottom"><button class="viewer-prev icon-button" type="button" aria-label="Предыдущее изображение">←</button><span id="viewer-counter" aria-live="polite"></span><a id="viewer-original" target="_blank" rel="noopener noreferrer">Исходник ↗</a><button class="viewer-next icon-button" type="button" aria-label="Следующее изображение">→</button></div></dialog>
 </body>
 </html>
